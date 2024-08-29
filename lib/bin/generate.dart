@@ -1,12 +1,8 @@
 library image_generator;
 
-
 import 'package:image_generator/generator/generator.dart';
 import 'package:image_generator/generator/generator_exception.dart';
 import 'package:image_generator/utils/utils.dart';
-
-export 'generator/generator.dart';
-/*
 
 Future<void> main(List<String> args) async {
   try {
@@ -18,4 +14,3 @@ Future<void> main(List<String> args) async {
     exitWithError('Failed to generate localization files.\n$e');
   }
 }
-*/
