@@ -1,5 +1,5 @@
 library image_generator;
-import 'dart:async';
+/*import 'dart:async';
 import 'dart:io';
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
@@ -138,5 +138,23 @@ class _UsageVisitor extends RecursiveAstVisitor<void> {
       usageCounts[value] = usageCounts[value]! + 1;
     }
     super.visitAdjacentStrings(node);
+  }
+}
+*/
+
+import 'package:image_generator/generator/generator.dart';
+import 'package:image_generator/generator/generator_exception.dart';
+import 'package:image_generator/utils/utils.dart';
+
+
+
+Future<void> main(List<String> args) async {
+  try {
+    var generator = Generator();
+    await generator.generateAsync();
+  } on GeneratorException catch (e) {
+    exitWithError(e.message);
+  } catch (e) {
+    exitWithError('Failed to generate localization files.\n$e');
   }
 }
