@@ -1,8 +1,7 @@
-
 builders:
   image_generator:
     import: "package:image_generator/image_generator.dart"
-    builder_factories: ["getImageGenerator"]
+    builder_factories: ["AssetGenerator"]
     build_extensions: { ".dart": ["Assets.dart"] }
     auto_apply: dependents
     build_to: source
